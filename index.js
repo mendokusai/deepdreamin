@@ -12,9 +12,13 @@ var pwd = '/Users/portabledino/Sites/node/deepdreamer/';
 var filename = pwd + process.argv[2];
 var outputFilename = path.join(path.dirname(filename), path.basename(filename, '.jpg') + '-filtered-' + filter + path.extname(filename));
 var url = 'https://dreamscopeapp.com/api/images';
+var count = process.argv[3];
+
+
 
 // make request
-request
+get_photo = function(){
+  request
   .post(url)                 //this is a POST req
   .field('filter', filter)   // the 'filter' param
   .attach('image', filename) //attach file as 'image'
@@ -57,3 +61,14 @@ request
     process.stdout.write('Processing...');
     poll();
   });
+};
+
+// photo_loop = function(){
+//   for(var i = 0; i < Number(process.argv[3]); i++) {
+//     get_photo();
+//     filename = outputFilename;
+//   };
+// };
+
+// photo_loop();
+get_photo();
