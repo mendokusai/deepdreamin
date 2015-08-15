@@ -11,3 +11,5 @@ The best addition to the [tutorial](https://www.codementor.io/nodejs/tutorial/go
 Most of this is quite straight forward, but there were a few variations added because `path.parse()` didn't want to work the way the tutorial suggests. Instead, this uses `path.basename(p, '.jpg')` to get to the base file name (which really doesn't effect the outcome.)
 
 Most important difference from the tutorial is that the instructions say to check against `processing_status == 1` but *2* **worked.**
+
+![author](https://github.com/mendokusai/deepdreamin/blob/master/ddryan.jpg?raw=true)
