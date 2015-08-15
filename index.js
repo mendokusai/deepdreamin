@@ -8,7 +8,8 @@ var debug = function() {
 
 // params
 var filter = 'art_deco';
-var filename = '/Users/portabledino/Sites/node/deepdreamer/bad.jpg';
+var pwd = '/Users/portabledino/Sites/node/deepdreamer/';
+var filename = pwd + process.argv[2];
 var outputFilename = path.join(path.dirname(filename), path.basename(filename, '.jpg') + '-filtered-' + filter + path.extname(filename));
 var url = 'https://dreamscopeapp.com/api/images';
 
