@@ -10,7 +10,7 @@ var debug = function() {
 var filter = 'art_deco';
 var pwd = '/Users/portabledino/Sites/node/deepdreamer/';
 var filename = pwd + process.argv[2];
-var outputFilename = path.join(path.dirname(filename), path.basename(filename, '.jpg') + '-filtered-' + filter + path.extname(filename));
+var outputFilename = path.join(path.dirname(filename), path.basename(filename, '.jpg') + path.extname(filename));
 var url = 'https://dreamscopeapp.com/api/images';
 var count = process.argv[3];
 
@@ -63,12 +63,11 @@ get_photo = function(){
   });
 };
 
-// photo_loop = function(){
-//   for(var i = 0; i < Number(process.argv[3]); i++) {
-//     get_photo();
-//     filename = outputFilename;
-//   };
-// };
+photo_loop = function(){
+  for(var i = 0; i < Number(process.argv[3]); i++) {
+    get_photo();
+  };
+};
 
-// photo_loop();
-get_photo();
+photo_loop();
+// get_photo();
