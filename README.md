@@ -7,5 +7,5 @@ Most of this is quite straight forward, but there were a few variations added be
 
 Most important difference from the tutorial is that the instructions say to check against `processing_status == 1` but *2* **worked.**
 
-####TODO
-**Improvements:** while it's neat and all to do this once at a time, build **a loop** to run through multiple rounds.
+##How to use
+The best addition to the [tutorial](https://www.codementor.io/nodejs/tutorial/google-deep-dreaming-web-automation-chrome-dev-tools#/?utm_source=nodeweekly&utm_medium=email) I've made is the addition of a loop to continue to run images through the process and get weirder shit. To run your wacko images, drop your image *(ex. 'image.jpg')* into the project folder and then run the following command: ```node index.js 'image.jpg' '15'``` This instance would process `image.jpg` 15 times. **Note** that both image and the number of processes are entered as strings (with quotes). The loop is optional and will only run if a string of a number (sorry!) is there.

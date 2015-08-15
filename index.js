@@ -64,7 +64,10 @@ get_photo = function(){
 };
 
 photo_loop = function(){
-  for(var i = 0; i < Number(process.argv[3]); i++) {
+  var count = 1
+  if (Number(process.argv[3]))
+    count = Number(process.argv[3]);
+  for(var i = 0; i < count; i++) {
     get_photo();
   };
 };
