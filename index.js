@@ -8,11 +8,8 @@ var debug = function() {
 
 // params
 var filter = 'art_deco';
-var filename = 'bad.jpg';
-var outputFilename = path.join(path.dirname(filename),
-      path.parse(filename).name + '-filtered-' + 
-      filter + path.extname(filename)
-      );
+var filename = '/Users/portabledino/Sites/node/deepdreamer/bad.jpg';
+var outputFilename = path.join(path.dirname(filename), path.basename(filename, '.jpg') + '-filtered-' + filter + path.extname(filename));
 var url = 'https://dreamscopeapp.com/api/images';
 
 // make request
@@ -34,8 +31,9 @@ request
           debug(res.body);
           var body = res.body;
           // check if process finished
-          if (body.processing_status == 1 && body.filtered_url) {
-            conosle.log('Ping!');
+          if (body.processing_status == 2 && body.filtered_url) {
+            console.log('Ping!');
+            console.log("poll_url: " + poll_url);
             console.log('Downloading image...');
             // download image and save to file
             request.get(body.filtered_url)
