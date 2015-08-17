@@ -1,6 +1,6 @@
 #Deepdreamer
 
-[Imgur](http://i.imgur.com/BNnwVAb.jpg)
+![Imgur](http://i.imgur.com/BNnwVAb.jpg)
 
 This is a node app port of a [codementor](https://www.codementor.io/nodejs/tutorial/google-deep-dreaming-web-automation-chrome-dev-tools#/?utm_source=nodeweekly&utm_medium=email) article. 
 
@@ -12,10 +12,10 @@ Most of this is quite straight forward, but there were a few variations added be
 
 Most important difference from the tutorial is that the instructions say to check against `processing_status == 1` but *2* **worked.**
 
-[Imgur](http://i.imgur.com/wYWRVnu.jpg)
+![Imgur](http://i.imgur.com/wYWRVnu.jpg)
 
 `node index.js 'image.jpg' '5'`
 
-[Imgur](http://i.imgur.com/6e33kNS.jpg)
+![Imgur](http://i.imgur.com/6e33kNS.jpg)
 
 `node index.js 'image.jpg' '100'`
